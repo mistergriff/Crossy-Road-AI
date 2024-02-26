@@ -1,0 +1,56 @@
+{
+    "Agent Controller": {
+        "checkpoints": [
+            {
+                "steps": 499958,
+                "file_path": "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-499958.onnx",
+                "reward": null,
+                "creation_time": 1708946644.906223,
+                "auxillary_file_paths": [
+                    "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-499958.pt"
+                ]
+            },
+            {
+                "steps": 500022,
+                "file_path": "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-500022.onnx",
+                "reward": null,
+                "creation_time": 1708946644.9553888,
+                "auxillary_file_paths": [
+                    "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-500022.pt"
+                ]
+            },
+            {
+                "steps": 500022,
+                "file_path": "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-500022.onnx",
+                "reward": null,
+                "creation_time": 1708950586.8610182,
+                "auxillary_file_paths": [
+                    "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-500022.pt"
+                ]
+            },
+            {
+                "steps": 500022,
+                "file_path": "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-500022.onnx",
+                "reward": null,
+                "creation_time": 1708950644.4401352,
+                "auxillary_file_paths": [
+                    "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-500022.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500022,
+            "file_path": "results\\=PelletGrabberRunV2\\Agent Controller.onnx",
+            "reward": null,
+            "creation_time": 1708950644.4401352,
+            "auxillary_file_paths": [
+                "results\\=PelletGrabberRunV2\\Agent Controller\\Agent Controller-500022.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.1+cpu"
+    }
+}
