@@ -6,55 +6,58 @@ using Unity.MLAgents.Sensors;
 public class AgentController : Agent
 {
     [SerializeField] private Transform targetTransform;
+    [SerializeField] private float moveSpeed = 4f;
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(0f, 0.3f, 0f);
+        // Agent
+        transform.localPosition = new Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
 
-        int rand = Random.Range(0, 2);
-        if (rand == 0)
-        {
-            targetTransform.localPosition = new Vector3(-4f, 0.3f, 0f);
-        }
-
-        if (rand == 1)
-        {
-            targetTransform.localPosition = new Vector3(4f, 0.3f, 0f);
-        }
+        //Target
+        targetTransform.localPosition = new Vector3(Random.Range(-4f, 4f), 0.3f, Random.Range(-4f, 4f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
+        // Observations : position de l'agent et de la balle
         sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(targetTransform.localPosition);
     }
 
-
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float move = actions.ContinuousActions[0];
-        float moveSpeed = 2f;
+        // Mouvement de l'agent
+        float moveX = actions.ContinuousActions[0];
+        float moveZ = actions.ContinuousActions[1];
 
-        transform.localPosition += new Vector3(move, 0f, 0f) * Time.deltaTime * moveSpeed;
+        Vector3 velocity = new Vector3(moveX, 0f, moveZ);
+
+        velocity = velocity.normalized * Time.deltaTime * moveSpeed;
+
+        transform.localPosition += velocity;
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+        // Contrôle manuel de l'agent
         ActionSegment<float> continuousAction = actionsOut.ContinuousActions;
         continuousAction[0] = Input.GetAxisRaw("Horizontal");
+        continuousAction[1] = Input.GetAxisRaw("Vertical");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Target")
         {
-            AddReward(5f);
+            AddReward(2f);
+            Debug.Log("<color=green>Target</color>");
             EndEpisode();
         }
 
         if (other.gameObject.tag == "Wall")
         {
-            AddReward(-2.5f);
+            AddReward(-1f);
+            Debug.Log("<color=red>Wall</color>");
             EndEpisode();
         }
     }
