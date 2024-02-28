@@ -324,7 +324,11 @@ PrefabInstance:
     - target: {fileID: 6174925287781264252, guid: 486cc2869d09c1c448a70d38de8a9812, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 75b68934c79a4354ca2dae02fa104b7e, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: 60f1e841238738b4497f34b33db474e3, type: 3}
+    - target: {fileID: 6174925287781264252, guid: 486cc2869d09c1c448a70d38de8a9812, type: 3}
+      propertyPath: m_BehaviorType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6494179708908163103, guid: 486cc2869d09c1c448a70d38de8a9812, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -364,6 +368,10 @@ PrefabInstance:
     - target: {fileID: 6494179708908163103, guid: 486cc2869d09c1c448a70d38de8a9812, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768339595473113603, guid: 486cc2869d09c1c448a70d38de8a9812, type: 3}
+      propertyPath: DecisionPeriod
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
