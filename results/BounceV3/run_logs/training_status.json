@@ -1,0 +1,38 @@
+{
+    "Pong Agent": {
+        "checkpoints": [
+            {
+                "steps": 499983,
+                "file_path": "results\\BounceV3\\Pong Agent\\Pong Agent-499983.onnx",
+                "reward": 15.0,
+                "creation_time": 1709229813.0610828,
+                "auxillary_file_paths": [
+                    "results\\BounceV3\\Pong Agent\\Pong Agent-499983.pt"
+                ]
+            },
+            {
+                "steps": 500018,
+                "file_path": "results\\BounceV3\\Pong Agent\\Pong Agent-500018.onnx",
+                "reward": 15.0,
+                "creation_time": 1709229813.135578,
+                "auxillary_file_paths": [
+                    "results\\BounceV3\\Pong Agent\\Pong Agent-500018.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500018,
+            "file_path": "results\\BounceV3\\Pong Agent.onnx",
+            "reward": 15.0,
+            "creation_time": 1709229813.135578,
+            "auxillary_file_paths": [
+                "results\\BounceV3\\Pong Agent\\Pong Agent-500018.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.1+cpu"
+    }
+}

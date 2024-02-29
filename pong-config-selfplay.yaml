@@ -1,0 +1,28 @@
+behaviors:
+  PongAgent: # Assurez-vous que cela correspond au nom du Behavior donné à votre agent dans Unity
+    trainer_type: ppo # Utilise Proximal Policy Optimization
+    hyperparameters:
+      batch_size: 64 # Taille du batch pour l'entraînement
+      buffer_size: 12000 # Taille du buffer, doit être plus grand que batch_size
+      learning_rate: 3.0e-4 # Taux d'apprentissage
+      beta: 5.0e-4 # Coefficient pour la régularisation d'entropie
+      epsilon: 0.2 # Coefficient pour PPO clip
+      lambd: 0.95 # Facteur de réduction pour l'avantage
+      num_epoch: 3 # Nombre d'époques
+      learning_rate_schedule: linear # Programmation du taux d'apprentissage
+    network_settings:
+      normalize: false # Normalisation des entrées
+      hidden_units: 128 # Unités dans les couches cachées
+      num_layers: 2 # Nombre de couches cachées
+    reward_signals:
+      extrinsic:
+        gamma: 0.99 # Facteur d'actualisation pour la récompense extrinsèque
+        strength: 1.0 # Importance de la récompense extrinsèque
+    max_steps: 5.0e6 # Nombre maximal de pas d'entraînement
+    time_horizon: 64 # Nombre de pas avant de couper un épisode
+    summary_freq: 20000 # Fréquence à laquelle écrire les summaries
+    self_play:
+      window: 10 # Nombre d'anciennes versions contre lesquelles jouer
+      play_against_latest_model_ratio: 0.5 # Ratio de temps joué contre la version la plus récente
+      save_steps: 50000 # Fréquence de sauvegarde pour les versions anciennes
+      swap_steps: 2000 # Fréquence à laquelle l'adversaire est changé

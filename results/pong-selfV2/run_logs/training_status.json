@@ -1,0 +1,39 @@
+{
+    "PongAgent": {
+        "checkpoints": [
+            {
+                "steps": 499983,
+                "file_path": "results\\pong-selfV2\\PongAgent\\PongAgent-499983.onnx",
+                "reward": 11.649484536082474,
+                "creation_time": 1709236072.6563199,
+                "auxillary_file_paths": [
+                    "results\\pong-selfV2\\PongAgent\\PongAgent-499983.pt"
+                ]
+            },
+            {
+                "steps": 500018,
+                "file_path": "results\\pong-selfV2\\PongAgent\\PongAgent-500018.onnx",
+                "reward": 11.683673469387756,
+                "creation_time": 1709236072.7275949,
+                "auxillary_file_paths": [
+                    "results\\pong-selfV2\\PongAgent\\PongAgent-500018.pt"
+                ]
+            }
+        ],
+        "elo": 276.5762593355508,
+        "final_checkpoint": {
+            "steps": 500018,
+            "file_path": "results\\pong-selfV2\\PongAgent.onnx",
+            "reward": 11.683673469387756,
+            "creation_time": 1709236072.7275949,
+            "auxillary_file_paths": [
+                "results\\pong-selfV2\\PongAgent\\PongAgent-500018.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.1+cpu"
+    }
+}
