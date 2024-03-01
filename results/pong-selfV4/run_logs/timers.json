@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1709278262",
+        "python_version": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\g.renaud\\Documents\\GitHub\\Crossy-Road-AI\\MLvenv\\Scripts\\mlagents-learn pong-config-selfplay.yaml --run-id=pong-selfV4 --resume",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.2.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1709278270"
+    },
+    "total": 8.0889431,
+    "count": 1,
+    "self": 0.0271732999999994,
+    "children": {
+        "run_training.setup": {
+            "total": 0.3285708999999999,
+            "count": 1,
+            "self": 0.3285708999999999
+        },
+        "TrainerController.start_learning": {
+            "total": 7.7331989,
+            "count": 1,
+            "self": 0.001188500000001369,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 7.7319701,
+                    "count": 1,
+                    "self": 7.7319701
+                },
+                "trainer_threads": {
+                    "total": 7.300000000043383e-06,
+                    "count": 1,
+                    "self": 7.300000000043383e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 3.2999999998395424e-05,
+                    "count": 1,
+                    "self": 3.2999999998395424e-05
+                }
+            }
+        }
+    }
+}

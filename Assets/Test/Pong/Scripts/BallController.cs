@@ -1,8 +1,10 @@
 using UnityEngine;
+using Unity.MLAgents;
 
 public class BallController : MonoBehaviour
 {
     public PongController pongController;
+    public GameObject agent1;
     private float initialSpeed = PongController.initialSpeed;
     private Rigidbody rb;
 
@@ -44,19 +46,17 @@ public class BallController : MonoBehaviour
         }
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == pongController.winWall)
+        if (other.gameObject.CompareTag("LeftWall"))
         {
-            pongController.HitWinWall();
-            Debug.Log("Trigger win");
+            agent1.GetComponent<PongController>().Hitwall(other.gameObject);
+            Debug.Log(other.gameObject.tag);
         }
-        if (other.gameObject == pongController.loseWall)
+        if (other.gameObject.CompareTag("RightWall"))
         {
-            pongController.HitLoseWall();
-            Debug.Log("Trigger Lose");
+            agent1.GetComponent<PongController>().Hitwall(other.gameObject);
+            Debug.Log(other.gameObject.tag);
         }
     }
 

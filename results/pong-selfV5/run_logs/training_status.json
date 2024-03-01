@@ -1,0 +1,66 @@
+{
+    "PongAgent": {
+        "checkpoints": [
+            {
+                "steps": 499982,
+                "file_path": "results\\pong-selfV5\\PongAgent\\PongAgent-499982.onnx",
+                "reward": 9.63963963963964,
+                "creation_time": 1709285939.1245253,
+                "auxillary_file_paths": [
+                    "results\\pong-selfV5\\PongAgent\\PongAgent-499982.pt"
+                ]
+            },
+            {
+                "steps": 999957,
+                "file_path": "results\\pong-selfV5\\PongAgent\\PongAgent-999957.onnx",
+                "reward": 9.555555555555555,
+                "creation_time": 1709286461.198944,
+                "auxillary_file_paths": [
+                    "results\\pong-selfV5\\PongAgent\\PongAgent-999957.pt"
+                ]
+            },
+            {
+                "steps": 1499967,
+                "file_path": "results\\pong-selfV5\\PongAgent\\PongAgent-1499967.onnx",
+                "reward": 10.0,
+                "creation_time": 1709286979.9245899,
+                "auxillary_file_paths": [
+                    "results\\pong-selfV5\\PongAgent\\PongAgent-1499967.pt"
+                ]
+            },
+            {
+                "steps": 1999990,
+                "file_path": "results\\pong-selfV5\\PongAgent\\PongAgent-1999990.onnx",
+                "reward": 9.347826086956522,
+                "creation_time": 1709287493.1107898,
+                "auxillary_file_paths": [
+                    "results\\pong-selfV5\\PongAgent\\PongAgent-1999990.pt"
+                ]
+            },
+            {
+                "steps": 2143581,
+                "file_path": "results\\pong-selfV5\\PongAgent\\PongAgent-2143581.onnx",
+                "reward": 10.0,
+                "creation_time": 1709287647.0303023,
+                "auxillary_file_paths": [
+                    "results\\pong-selfV5\\PongAgent\\PongAgent-2143581.pt"
+                ]
+            }
+        ],
+        "elo": 632.4103790860503,
+        "final_checkpoint": {
+            "steps": 2143581,
+            "file_path": "results\\pong-selfV5\\PongAgent.onnx",
+            "reward": 10.0,
+            "creation_time": 1709287647.0303023,
+            "auxillary_file_paths": [
+                "results\\pong-selfV5\\PongAgent\\PongAgent-2143581.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.1+cpu"
+    }
+}
