@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &164236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 464236}
+  - 114: {fileID: 11457260}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464236
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!82 &8278498
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164236}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2d51f8d4744f24c078e3b729377e3a47, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: .25
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &11457260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9421afa025b94171ab49ebcbb366c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  player: {fileID: 0}
+  startSpawnPosition: {x: 20, y: 0, z: -5}
+  meshPrefabs:
+  - {fileID: 401392, guid: 2399bfaf6550f4f408e678b762aa3deb, type: 2}
+  - {fileID: 401392, guid: 2399bfaf6550f4f408e678b762aa3deb, type: 2}
+  - {fileID: 461376, guid: c9e5ec0e370054b5fa595ac4c7ce5095, type: 2}
+  - {fileID: 461376, guid: c9e5ec0e370054b5fa595ac4c7ce5095, type: 2}
+  - {fileID: 423128, guid: ec0d9d90b231e424d9a3c2309fb0182c, type: 2}
+  safePrefab: {fileID: 461376, guid: c9e5ec0e370054b5fa595ac4c7ce5095, type: 2}
+  spawnOffset: 20
+  coinPrefab: {fileID: 415112, guid: b474d3c4b27b54b44a3f2c55b7ce733b, type: 2}
+  spawnCoinChance: .100000001
+  leftBound: -4
+  rightBound: 5
+  scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
+  coinText: {fileID: 0}
+  coinAudio: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  storeMenu: {fileID: 0}
+  gameOverMenu: {fileID: 0}
+  gameOverText: {fileID: 0}
+  highScoreTextColor: {r: .899162173, g: .953091919, b: .539679825, a: 1}
+  retryButtonText: {fileID: 0}
+  storeItems:
+  - {r: .448881984, g: .0778259709, b: .202383369, a: 1}
+  - {r: .79876703, g: .384179056, b: .217599198, a: 1}
+  - {r: .948901117, g: .857500553, b: .485457718, a: 1}
+  - {r: .899162173, g: .953091919, b: .539679825, a: 1}
+  - {r: .474325627, g: .703712702, b: .580992162, a: 1}
+  - {r: .275844097, g: .44865948, b: .681744277, a: 1}
+  - {r: .280118197, g: .236637443, b: .562983274, a: 1}
+  storeButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  purchasedButtonColor: {r: .686853826, g: .830707252, b: .581591904, a: 1}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 164236}
+  m_IsPrefabParent: 1
