@@ -55,6 +55,9 @@ public class ObjectSpawnerScript : MonoBehaviour {
 		car = ((Instantiate (objectPrefab, transform.position, Quaternion.identity) as Transform)
 		       .GetComponent<CarController>() as CarController);
 		// Push the object either left or right.
+		if (direction == -1f){
+			car.transform.localEulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+        }
 		car.Move(direction);
 	}
 }

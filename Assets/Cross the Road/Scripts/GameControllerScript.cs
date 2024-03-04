@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour {
 
@@ -264,7 +265,7 @@ public class GameControllerScript : MonoBehaviour {
 		// Update the player's amount of coins in PlayerPrefs.
 		PlayerPrefs.SetInt (COINS, coins);
 		// Quit the game.
-		Application.LoadLevel (Application.loadedLevel);
+		SceneManager.LoadScene(0);
 	}
 
 	/// <summary>
