@@ -14499,7 +14499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 3
   maxSpeed: 8
-  boxCollider: {fileID: 0}
+  boxCollider: {fileID: 4532868143285696871}
   honk: {fileID: 8379832256356231315}
   honkSounds:
   - {fileID: 8300000, guid: 83e48785705b94e9f9a6e4eac17df152, type: 3}

@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 		// Get the Rigidbody Object.
 		playerRigidbody = gameObject.GetComponent<Rigidbody>();
 		// Set the color of the cube.
-		mesh.GetComponent<Renderer>().material.color = gameController.GetPlayerColor();
+		mesh.GetComponent<MeshRenderer>().material.color = gameController.GetPlayerColor();
     }
 
 	void Update () {
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter (Collision coll) {
 		// The player has been hit by a car.
-		if (coll.gameObject.CompareTag ("Car")) {
+		if (coll.gameObject.CompareTag ("Car") || coll.gameObject.CompareTag("Train")) {
 			// TODO Show some sort of death animation.
 			gameController.GameOver();
 		}

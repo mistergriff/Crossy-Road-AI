@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &414676
 Transform:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &6549362
 BoxCollider:
@@ -201,13 +201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972abd6ac112942ccaf03251a0aae9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightBound: 5
-  leftBound: -4
-  snapToGridDistance: 0.05
-  anim: {fileID: 9514678}
-  smooth: 5
+  rightBound: 5.1
+  leftBound: -4.1
+  snapToGridDistance: 0.1
+  anim: {fileID: 3337576908633838086}
+  smooth: 10
   speed: 3
-  mesh: {fileID: 114676}
+  mesh: {fileID: 1192490273284843129}
 --- !u!1001 &2039561376322378536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -278,7 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4fb54636ae0745940a9fe6fd5a5fd362, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4fb54636ae0745940a9fe6fd5a5fd362, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -287,6 +291,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4fb54636ae0745940a9fe6fd5a5fd362, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8605230112155027035}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4fb54636ae0745940a9fe6fd5a5fd362, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3337576908633838086}
   m_SourcePrefab: {fileID: 100100000, guid: 4fb54636ae0745940a9fe6fd5a5fd362, type: 3}
 --- !u!1 &1192490273284843129 stripped
 GameObject:
@@ -306,14 +313,14 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 530e2615152e89b4d8e3310143360e6b, type: 2}
+  - {fileID: 2100000, guid: 84b9e1d19d11078d11005b9844295342, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -335,6 +342,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &3337576908633838086
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192490273284843129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35b654b8b9aed4e749769f0ba0f99f9b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &2001642473561013443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4fb54636ae0745940a9fe6fd5a5fd362, type: 3}

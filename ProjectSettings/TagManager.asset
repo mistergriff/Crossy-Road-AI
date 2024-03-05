@@ -7,7 +7,8 @@ TagManager:
   - Ground
   - Coin
   - Car
-  - PlayerMesh
+  - Tree
+  - Train
   layers:
   - Default
   - TransparentFX

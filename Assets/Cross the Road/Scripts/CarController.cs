@@ -34,8 +34,12 @@ public class CarController : MonoBehaviour {
 		if (other.CompareTag ("Car")) {
 			velocity = (other.GetComponent<CarController>() as CarController).GetVelocity();
 		}
-		// Honk if the player is almost hit by the car.
-		else if (other.CompareTag ("Player")) {
+        else if (other.CompareTag("Train"))
+        {
+            velocity = (other.GetComponent<CarController>() as CarController).GetVelocity();
+        }
+        // Honk if the player is almost hit by the car.
+        else if (other.CompareTag ("Player")) {
 			honk.clip = honkSounds[Random.Range (0, honkSounds.Length)];
 			honk.Play();
 		}
@@ -49,10 +53,6 @@ public class CarController : MonoBehaviour {
 		// Move the direction provided.
 		speed = Random.Range (minSpeed, maxSpeed) * direction;
 		velocity = Vector3.right * speed;
-
-		// Move the trigger to the front of the car for accident avoidance.
-		if (boxCollider != null)
-			boxCollider.center = new Vector3 (direction, 0f, 0f);
 	}
 
 	/// <summary>
