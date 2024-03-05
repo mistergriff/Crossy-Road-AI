@@ -4134,6 +4134,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114676, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 414678, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4170,14 +4174,61 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 84b9e1d19d11078d11005b9844295342, type: 2}
+    - target: {fileID: 5414678, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472886, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1867858650}
+    - target: {fileID: 11472886, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 1867858647}
+    - target: {fileID: 11472886, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: smooth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472886, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: leftBound
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11472886, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: rightBound
+      value: 5.1
+      objectReference: {fileID: 0}
     - target: {fileID: 11472886, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
       propertyPath: snapToGridDistance
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1192490273284843129, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1192490273284843129, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: m_TagString
+      value: PlayerMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001642473561013443, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605230112155027035, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605230112155027035, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84b9e1d19d11078d11005b9844295342, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1192490273284843129, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1867858650}
   m_SourcePrefab: {fileID: 100100000, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
 --- !u!20 &1713642664 stripped
 Camera:
@@ -4882,6 +4933,32 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 22452688, guid: 33d7b7983bbbc4146a8bd161c89cd4c2, type: 3}
   m_PrefabInstance: {fileID: 1836753960}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1867858647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1192490273284843129, guid: 2f13992bc6d534432bdf572be3939b76, type: 3}
+  m_PrefabInstance: {fileID: 1639066900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1867858650
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867858647}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35b654b8b9aed4e749769f0ba0f99f9b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1901759623
 GameObject:
   m_ObjectHideFlags: 0

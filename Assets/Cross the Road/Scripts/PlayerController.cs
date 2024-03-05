@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour {
 
-	public int rightBound = 5;					// Player's right bound.
-	public int leftBound = -4;					// Player's left bound.
+	public float rightBound = 5.5f;					// Player's right bound.
+	public float leftBound = -4.5f;					// Player's left bound.
 	public float snapToGridDistance = 0.05f;	// Once the player is almost at the location, snap to the location.
 	public Animator anim;						// Used for triggering animations.
-	public float smooth = 5.0f;					// Smooth player movement.
+	public float smooth = 10.0f;					// Smooth player movement.
 	public float speed = 1.0f;					// Player speed.
 	public GameObject mesh;						// Mesh of the player. Used to set the color.
 
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 		playerRigidbody = gameObject.GetComponent<Rigidbody>();
 		// Set the color of the cube.
 		mesh.GetComponent<Renderer>().material.color = gameController.GetPlayerColor();
-	}
+    }
 
 	void Update () {
 		// Don't do anything if the game is paused.
@@ -127,29 +128,30 @@ public class PlayerController : MonoBehaviour {
 	/// Jump forward.
 	/// </summary>
 	void JumpForward () {
-		Vector3 newPosition = jumpDestination;
-		newPosition.z = Mathf.Round(newPosition.z + 1);
-		Jump (newPosition);
-	}
+        Vector3 newPosition = jumpDestination + Vector3.forward;
+        mesh.transform.rotation = Quaternion.Euler(0, 0, 0);
+        Jump(newPosition);
+    }
 
 	/// <summary>
 	/// Jump backward.
 	/// </summary>
 	void JumpBackward () {
-		Vector3 newPosition = jumpDestination;
-		newPosition.z = Mathf.Round(newPosition.z - 1);
-		Jump (newPosition);
-	}
+        Vector3 newPosition = jumpDestination - Vector3.forward;
+        mesh.transform.rotation = Quaternion.Euler(0, 180, 0);
+        Jump(newPosition);
+    }
 
 	/// <summary>
 	/// Jump left.
 	/// </summary>
-	void JumpLeft () {
+	void JumpLeft(){
 		// Only allow the player to jump left if they haven't reached the left bound.
-		if (transform.position.x > leftBound) {
-			Vector3 newPosition = jumpDestination;
-			newPosition.x = Mathf.Round(newPosition.x - 1);
-			Jump (newPosition);
+		if (transform.position.x >= leftBound)
+		{
+			Vector3 newPosition = jumpDestination - Vector3.right;
+            mesh.transform.rotation = Quaternion.Euler(0, -90, 0);
+            Jump(newPosition);
 		}
 	}
 
@@ -157,11 +159,12 @@ public class PlayerController : MonoBehaviour {
 	/// Jump right.
 	/// </summary>
 	void JumpRight () {
-		// Only allow the player to jump right if they haven't reached the right bound.
-		if (transform.position.x < rightBound) {
-			Vector3 newPosition = jumpDestination;
-			newPosition.x = Mathf.Round(newPosition.x + 1);
-			Jump (newPosition);
-		}
-	}
+        // Only allow the player to jump right if they haven't reached the right bound.
+        if (transform.position.x <= rightBound)
+        {
+            Vector3 newPosition = jumpDestination + Vector3.right;
+            mesh.transform.rotation = Quaternion.Euler(0, 90, 0);
+            Jump(newPosition);
+        }
+    }
 }
