@@ -754,11 +754,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &857779733 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4683338830997386274, guid: bba899382950d9b4babaa295bbf38881, type: 3}
-  m_PrefabInstance: {fileID: 611881667049730381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &859824800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1455,25 +1450,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5994862548759049679, guid: bba899382950d9b4babaa295bbf38881, type: 3}
-      propertyPath: m_TagString
-      value: RightWall
-      objectReference: {fileID: 0}
-    - target: {fileID: 6314607976322035370, guid: bba899382950d9b4babaa295bbf38881, type: 3}
-      propertyPath: agent1
+    - target: {fileID: 5430394469037184436, guid: bba899382950d9b4babaa295bbf38881, type: 3}
+      propertyPath: m_Model
       value: 
-      objectReference: {fileID: 857779733}
-    - target: {fileID: 6314607976322035370, guid: bba899382950d9b4babaa295bbf38881, type: 3}
-      propertyPath: speedIncreaseFactor
-      value: 1.03
+      objectReference: {fileID: 5022602860645237092, guid: 0f1ba5fdaa500ff4f8923689056235c5, type: 3}
+    - target: {fileID: 8962686166249702097, guid: bba899382950d9b4babaa295bbf38881, type: 3}
+      propertyPath: m_Model
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8022466068566802647, guid: bba899382950d9b4babaa295bbf38881, type: 3}
-      propertyPath: m_TagString
-      value: LeftWall
+    - target: {fileID: 8962686166249702097, guid: bba899382950d9b4babaa295bbf38881, type: 3}
+      propertyPath: m_BehaviorType
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5892446870409919788, guid: bba899382950d9b4babaa295bbf38881, type: 3}
-    - {fileID: 3088848740103800081, guid: bba899382950d9b4babaa295bbf38881, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
