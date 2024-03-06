@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour {
 	public Animator anim;						// Used for triggering animations.
 	public float smooth = 10.0f;					// Smooth player movement.
 	public float speed = 1.0f;					// Player speed.
-	public GameObject mesh;						// Mesh of the player. Used to set the color.
+	public GameObject colorMesh;                // Mesh of the player. Used to set the color.
+	public GameObject mesh;						// Mesh of the player. Used to rotate when moving.
 
 	bool moving = false;						// Is the player currently moving?
 	Vector3 jumpDestination;					// Where to jump to.
@@ -30,8 +31,8 @@ public class PlayerController : MonoBehaviour {
 			.GetComponent<GameControllerScript>() as GameControllerScript;
 		// Get the Rigidbody Object.
 		playerRigidbody = gameObject.GetComponent<Rigidbody>();
-		// Set the color of the cube.
-		mesh.GetComponent<MeshRenderer>().material.color = gameController.GetPlayerColor();
+        // Set the color of the cube.
+        colorMesh.GetComponent<MeshRenderer>().material.color = gameController.GetPlayerColor();
     }
 
 	void Update () {
