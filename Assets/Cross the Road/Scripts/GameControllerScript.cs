@@ -67,8 +67,15 @@ public class GameControllerScript : MonoBehaviour {
 		while (SpawnStripNeeded()) {
 			// TODO Change spawn patterns based on current distance to add difficulty.
 			int rand = Random.Range (0, meshPrefabs.Length);
+            curSpawnPosition = startSpawnPosition;
+            if (rand == 5) 
+			{
+				curSpawnPosition += new Vector3(0f, -0.2f, 0f);
+			}
 			ObjectSpawnerScript[] objectSpawnerScripts = ((Instantiate (meshPrefabs[rand], curSpawnPosition, Quaternion.identity) as Transform)
 			                                           .gameObject.GetComponentsInChildren<ObjectSpawnerScript>() as ObjectSpawnerScript[]);
+			
+
 			try {
 				Destroy(objectSpawnerScripts[Random.Range (0, objectSpawnerScripts.Length)].gameObject);
 			} catch (System.IndexOutOfRangeException) {

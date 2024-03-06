@@ -9,6 +9,7 @@ TagManager:
   - Car
   - Tree
   - Train
+  - Wood
   layers:
   - Default
   - TransparentFX
