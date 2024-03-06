@@ -25,6 +25,10 @@ public class CarController : MonoBehaviour {
 	void OnCollisionEnter (Collision coll) {
 		// Stop if the player was hit.
 		if (coll.gameObject.CompareTag ("Player")) {
+			if (gameObject.CompareTag("Wood"))
+			{
+				return;
+			}
 			velocity = Vector3.zero;
 		}
 	}

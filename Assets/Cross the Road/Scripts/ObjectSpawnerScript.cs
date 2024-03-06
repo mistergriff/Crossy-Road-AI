@@ -52,17 +52,17 @@ public class ObjectSpawnerScript : MonoBehaviour {
 	/// </summary>
 	void SpawnObject () {
 		CarController car;
-		Vector3 trainOffset = new Vector3 (0, 0.1f, 0);
+		Vector3 Offset = new Vector3 (0, 0.1f, 0);
 
 		if (objectPrefab.CompareTag("Train"))
 		{
-			trainOffset = new Vector3(0, 0.3f, 0);
+			Offset = new Vector3(0, 0.3f, 0);
 		}
 		if (objectPrefab.CompareTag("Wood"))
 		{
-			trainOffset = new Vector3(0, -0.1f, 0);
+			Offset = new Vector3(0, -0.2f, 0);
 		}
-		car = ((Instantiate (objectPrefab, transform.position + trainOffset, Quaternion.identity) as Transform)
+		car = ((Instantiate (objectPrefab, transform.position + Offset, Quaternion.identity) as Transform)
 		       .GetComponent<CarController>() as CarController);
 		// Push the object either left or right.
 		if (direction == -1f){
