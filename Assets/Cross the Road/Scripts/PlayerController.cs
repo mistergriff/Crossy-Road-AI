@@ -10,18 +10,24 @@ public class PlayerController : MonoBehaviour {
 	public float smooth = 10.0f;					// Smooth player movement.
 	public float speed = 1.0f;					// Player speed.
 	public GameObject colorMesh;                // Mesh of the player. Used to set the color.
-	public GameObject mesh;						// Mesh of the player. Used to rotate when moving.
+	public GameObject mesh;                     // Mesh of the player. Used to rotate when moving.
+	
 
 	bool moving = false;						// Is the player currently moving?
 	Vector3 jumpDestination;					// Where to jump to.
 	Vector3 queuedJumpDestination;				// Where to jump to after the current jump finishes.
-	Vector3 jumpStart;							// Where the player's current jump started.
+	Vector3 jumpStart;                          // Where the player's current jump started.
+	
 	float startTime;							// When the player's current jump started.
 	float journeyLength = 1.0f;					// How far to jump.
 	GameControllerScript gameController;		// The gamecontroller object.
+	public CarController carController;
 	Rigidbody playerRigidbody;
+    bool onMovingPlatform = false;
+    Transform movingPlatformTransform;
+    Vector3 platformPositionLastFrame;
 
-	void Start () {
+    void Start () {
 		// Get starting position.
 		jumpDestination = transform.position;
 		jumpStart = transform.position;
@@ -51,9 +57,28 @@ public class PlayerController : MonoBehaviour {
 			// TODO Show some sort of death animation.
 			gameController.GameOver();
 		}
+
+		if(coll.gameObject.CompareTag("Wood"))
+		{
+            onMovingPlatform = true;
+            movingPlatformTransform = coll.transform;
+            platformPositionLastFrame = movingPlatformTransform.position;
+        }
+
+		
 	}
 
-	void OnTriggerEnter (Collider other) {
+    private void OnCollisionExit(Collision coll)
+    {
+        if(coll.gameObject.CompareTag("Wood"))
+        {
+            onMovingPlatform = false;
+            movingPlatformTransform = null;
+
+        }
+    }
+
+    void OnTriggerEnter (Collider other) {
 		// Pick up coins.
 		if (other.CompareTag ("Coin")) {
 			gameController.CollectCoin ();
