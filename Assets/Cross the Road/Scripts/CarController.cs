@@ -9,7 +9,9 @@ public class CarController : MonoBehaviour {
 	public AudioClip[] honkSounds;			// All possible honks. One will be chosen at random.
 
 	float speed = 1f;						// Current speed of the car.
-	Vector3 velocity = new Vector3();		// Ref for the current velocity.
+	Vector3 velocity = new Vector3();       // Ref for the current velocity.
+	public static CarController instance;
+
 
 	void Update () {
 		GetComponent<Rigidbody>().velocity = velocity;
@@ -57,6 +59,9 @@ public class CarController : MonoBehaviour {
 		// Move the direction provided.
 		speed = Random.Range (minSpeed, maxSpeed) * direction;
 		velocity = Vector3.right * speed;
+
+		
+
 	}
 
 	/// <summary>
