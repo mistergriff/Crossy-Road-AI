@@ -46,7 +46,8 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter (Collision coll) {
 		// The player has been hit by a car.
-		if (coll.gameObject.CompareTag ("Car") || coll.gameObject.CompareTag("Train")) {
+		if (coll.gameObject.CompareTag ("Car") || coll.gameObject.CompareTag("Train"))
+		{
 			// TODO Show some sort of death animation.
 			gameController.GameOver();
 		}
@@ -57,7 +58,12 @@ public class PlayerController : MonoBehaviour {
 		if (other.CompareTag ("Coin")) {
 			gameController.CollectCoin ();
 			Destroy (other.gameObject);
-		} 
+		}
+
+		if (other.CompareTag("Water"))
+		{
+            gameController.GameOver();
+        }
 	}
 
 	/// <summary>
